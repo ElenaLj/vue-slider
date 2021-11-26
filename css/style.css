@@ -41,7 +41,7 @@ body {
 
 .slider-items {
     height: 80vh;
-    display: none;
+    /* display: none; */
     position: relative;
 }
 
@@ -80,12 +80,11 @@ body {
 
 .thumbnail .img-container {
     height: calc(100% / 5);
-    opacity: .7;
+    filter: grayscale(1);
 }
 
 .thumbnail .active {
-    border: 1px solid white;
-    opacity: 1;
+    filter: grayscale(0);
 }
 
 .thumbnail .arrow-up {
@@ -114,6 +113,10 @@ body {
     line-height: 25px;
     text-align: center;
     z-index: 999;
+}
+.arrow-up:hover,
+.arrow-down:hover {
+    cursor: pointer;
 }
 
 .thumbnail .arrow-up > i, 

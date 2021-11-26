@@ -21,8 +21,8 @@
                 <div class="slider">
 
                     <!--DA INSERIRE CON JS-->
-                    <div class="slider-items active">
-                        <img src="img/game-of-thrones.jpeg" alt="">
+                    <div class="slider-items">
+                        <img v-bind:src="houses[currentImage].image">
                     </div>
                     <!--/ DA INSERIRE CON JS-->
                 </div> 
@@ -32,18 +32,18 @@
                 <div class="thumbnail">
 
                     <!-- PARTE DA INSERIRE CON JS -->
-                    <div class="img-container" v-for="house in houses">
+                    <div class="img-container" v-for="(house, index) in houses" v-bind:class="setActiveClass(index)">
                         <img v-bind:src="house.image">
                     </div>
                     <!-- /PARTE DA INSERIRE CON JS -->
 
                     <!-- pulsanti -->
                     <div class="arrow-up">
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-up" @click="prevImage()"></i>
                     </div> 
 
                     <div class="arrow-down">
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down" @click="nextImage()"></i>
                     </div>
                     <!-- /pulsanti -->
                 </div> 

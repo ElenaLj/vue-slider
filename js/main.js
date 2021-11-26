@@ -28,6 +28,30 @@ const app = new Vue({
                 title: "House of Baratheon",
                 text: "Ours Is The Fury"
             },
-        ]
+        ],
+        currentImage: 0,
     },
+    methods: {
+        nextImage: function() {
+            if(this.currentImage == this.houses.length - 1){
+                this.currentImage = 0;
+            } else {
+                this.currentImage++;
+            }
+        },
+        prevImage: function() {
+            if(this.currentImage == 0){
+                this.currentImage = this.houses.length - 1;
+            } else {
+                this.currentImage--;
+            }
+        },
+        setActiveClass: function(index) {
+            if(index == this.currentImage) {
+                return 'active';
+            } else {
+                return '';
+            }
+        }
+    }
 });
