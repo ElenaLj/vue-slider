@@ -8,66 +8,52 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="debug">
+<body>
 
-    <!-- inizio contenitore del carousel -->
-    <div class="container">
+    <div id="root">
+        <!-- inizio contenitore del carousel -->
+        <div class="container">
 
-        <!-- sezione delle immagini -->
-        <div class="items-container">
+            <!-- sezione delle immagini -->
+            <div class="items-container">
 
-            <!-- colonna di sinistra -->
-             <div class="slider">
+                <!-- colonna di sinistra -->
+                <div class="slider">
 
-                <!--DA INSERIRE CON JS-->
-                <div class="slider-items active">
-                    <img src="img/game-of-thrones.jpeg" alt="">
-                </div>
-                <!--/ DA INSERIRE CON JS-->
-            </div> 
-            <!-- /colonna di sinistra -->
-
-            <!-- thumbnail -->
-            <div class="thumbnail">
-
-                <!-- PARTE DA INSERIRE CON JS -->
-                <div class="img-container active">
-                    <img src="img/game-of-thrones.jpeg" alt="">
-                </div>
-
-                <div class="img-container">
-                    <img src="img/house-of-lannister.jpeg" alt="">
-                </div>
-
-                <div class="img-container">
-                    <img src="img/house-of-stark.jpeg" alt="">
-                </div>
-
-                <div class="img-container">
-                    <img src="img/house-of-targaryen.jpeg" alt="">
-                </div>
-
-                <div class="img-container">
-                    <img src="img/house-of-baratheon.jpeg" alt="">
+                    <!--DA INSERIRE CON JS-->
+                    <div class="slider-items active">
+                        <img src="img/game-of-thrones.jpeg" alt="">
+                    </div>
+                    <!--/ DA INSERIRE CON JS-->
                 </div> 
-                <!-- /PARTE DA INSERIRE CON JS -->
+                <!-- /colonna di sinistra -->
 
-                <!-- pulsanti -->
-                <div class="arrow-up">
-                    <i class="fas fa-chevron-up"></i>
+                <!-- thumbnail -->
+                <div class="thumbnail">
+
+                    <!-- PARTE DA INSERIRE CON JS -->
+                    <div class="img-container" v-for="house in houses">
+                        <img v-bind:src="house.image">
+                    </div>
+                    <!-- /PARTE DA INSERIRE CON JS -->
+
+                    <!-- pulsanti -->
+                    <div class="arrow-up">
+                        <i class="fas fa-chevron-up"></i>
+                    </div> 
+
+                    <div class="arrow-down">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <!-- /pulsanti -->
                 </div> 
+                <!-- /thumbnail -->
+            </div>
+            <!-- /sezione delle immagini -->
 
-                <div class="arrow-down">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <!-- /pulsanti -->
-             </div> 
-            <!-- /thumbnail -->
         </div>
-        <!-- /sezione delle immagini -->
-
+        <!-- /contenitore carousel -->
     </div>
-    <!-- /contenitore carousel -->
 
 
     <!-- vue -->
