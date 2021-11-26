@@ -1,0 +1,142 @@
+/* *** commons *** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+/* *** contenuto pagina *** */
+.container {
+   height: 100vh;
+   position: relative;
+}
+
+/* *** contenitore degli elementi *** */
+.container .items-container {
+    width: 80%;
+    /* height: 80vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     /* clearfix */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* *** immagine grande *** */
+.slider {
+    width: 85%;
+    height: 80vh;
+    float: left;
+    position: relative;
+}
+
+.slider-items {
+    height: 80vh;
+    display: none;
+    position: relative;
+}
+
+.slider-items.active {
+    display: block;
+}
+
+ .text {
+     width: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+
+.text > * {
+    text-align: right;
+    color: white;
+}
+
+.slider img,
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* *** thumbnail *** */
+.thumbnail {
+    width: 15%;
+    height: 80vh;
+    float: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail .img-container {
+    height: calc(100% / 5);
+    opacity: .7;
+}
+
+.thumbnail .active {
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.thumbnail .arrow-up {
+    margin-top: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail .arrow-down {
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail .arrow-up,
+.thumbnail .arrow-down {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: lightgray;
+    opacity: .5;
+    line-height: 25px;
+    text-align: center;
+    z-index: 999;
+}
+
+.thumbnail .arrow-up > i, 
+.thumbnail .arrow-down > i {
+    font-size: 18px;
+}
+
+/* *** debug *** */
+/* .debug .container {
+    background-color: lightpink;
+}
+
+.debug .slider {
+    background-color: rgb(219, 89, 219);
+}
+
+.debug .col-sx {
+    background-color: mediumpurple;
+}
+
+.debug .col-dx {
+    background-color: rgb(90, 58, 156);
+}
+
+.debug .col-dx > div.small {
+    border: 1px solid black;
+} */
