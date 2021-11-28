@@ -5,7 +5,7 @@ const app = new Vue({
         houses: [
             { 
                 image: "img/game-of-thrones.jpeg",
-                title: "Game of Thrones",
+                title: "",
                 text: "All Men Must Die"
             },
             { 
