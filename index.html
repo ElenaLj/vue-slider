@@ -39,7 +39,7 @@
                 <div class="thumbnail">
 
                     <!-- PARTE DA INSERIRE CON JS -->
-                    <div class="img-container" v-for="(house, index) in houses" v-bind:class="setActiveClass(index)">
+                    <div class="img-container" v-for="(house, index) in houses" v-bind:class="setActiveClass(index)" @click="selectImage(index)">
                         <img v-bind:src="house.image">
                     </div>
                     <!-- /PARTE DA INSERIRE CON JS -->

@@ -86,6 +86,10 @@ body {
     filter: grayscale(1);
 }
 
+.thumbnail .img-container:hover {
+    cursor: pointer;
+}
+
 .thumbnail .active {
     filter: grayscale(0);
 }

@@ -52,6 +52,16 @@ const app = new Vue({
             } else {
                 return '';
             }
+        },
+        selectImage: function(index) {
+            this.currentImage = index;
+        },
+        mounted() {
+            const self = this;
+    
+            setInterval(function(){ 
+            	self.nextImage();
+            }, 3000);
         }
     }
 });
